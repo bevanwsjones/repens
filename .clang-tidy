@@ -1,0 +1,29 @@
+---
+Checks: >
+  -*,
+  bugprone-*,
+  modernize-*,
+  misc-include-cleaner,
+  performance-*,
+  readability-identifier-naming
+WarningsAsErrors: ''
+HeaderFilterRegex: '^.*/(src|include|test)/.*'
+CheckOptions:
+  # Types: Matrix_Sparse
+  - { key: readability-identifier-naming.ClassCase,               value: Camel_Snake_Case }
+  - { key: readability-identifier-naming.StructCase,              value: Camel_Snake_Case }
+  - { key: readability-identifier-naming.UnionCase,               value: Camel_Snake_Case }
+  - { key: readability-identifier-naming.EnumCase,                value: Camel_Snake_Case }
+  - { key: readability-identifier-naming.TypedefCase,             value: Camel_Snake_Case }
+  - { key: readability-identifier-naming.TypeAliasCase,           value: Camel_Snake_Case }
+  - { key: readability-identifier-naming.TemplateParameterCase,   value: Camel_Snake_Case }
+  # Everything else: snake_case
+  - { key: readability-identifier-naming.NamespaceCase,           value: lower_case }
+  - { key: readability-identifier-naming.FunctionCase,            value: lower_case }
+  - { key: readability-identifier-naming.VariableCase,            value: lower_case }
+  - { key: readability-identifier-naming.ParameterCase,           value: lower_case }
+  - { key: readability-identifier-naming.MemberCase,              value: lower_case }
+  # Globals and macros: SCREAMING_SNAKE_CASE
+  - { key: readability-identifier-naming.GlobalVariableCase,      value: UPPER_CASE }
+  - { key: readability-identifier-naming.GlobalConstantCase,      value: UPPER_CASE }
+  - { key: readability-identifier-naming.MacroDefinitionCase,     value: UPPER_CASE }

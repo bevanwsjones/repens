@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "clangd.arguments": [
+    "--clang-tidy",
+    "--compile-commands-dir=${workspaceFolder}/build",
+    "--header-insertion=never"
+  ],
+  "cmake.buildDirectory": "${workspaceFolder}/build"
+}
