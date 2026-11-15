@@ -3,6 +3,7 @@ Checks: >
   -*,
   bugprone-*,
   modernize-*,
+  -modernize-use-trailing-return-type,
   misc-include-cleaner,
   performance-*,
   readability-identifier-naming
